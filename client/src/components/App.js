@@ -26,12 +26,12 @@ class App extends Component {
         </header>
         <section className='main-content'>
           <div className='emoji-bar'>
-            <span className='emoji'>&#x1f496;</span>
-            <span className='emoji'>&#x1f415;</span>
-            <span className='emoji'>&#x1f415;</span>
-            <span className='emoji'>&#x1f415;</span>
-            <span className='emoji'>&#x1f415;</span>
-            <span className='emoji'>&#x1f496;</span>
+            <span className='emoji' role='img' aria-labelledby='jsx-a11y/accessible-emoji'>&#x1f496;</span>
+            <span className='emoji' role='img' aria-labelledby='jsx-a11y/accessible-emoji'>&#x1f415;</span>
+            <span className='emoji' role='img' aria-labelledby='jsx-a11y/accessible-emoji'>&#x1f415;</span>
+            <span className='emoji' role='img' aria-labelledby='jsx-a11y/accessible-emoji'>&#x1f415;</span>
+            <span className='emoji' role='img' aria-labelledby='jsx-a11y/accessible-emoji'>&#x1f415;</span>
+            <span className='emoji' role='img' aria-labelledby='jsx-a11y/accessible-emoji'>&#x1f496;</span>
           </div>
           <section className='dynamic-content'>
             { this.state.isLoading ?
@@ -41,7 +41,7 @@ class App extends Component {
           </section>
           <div>
             <p>Look at this cute dog!</p>
-            <button className='fetch-button' onClick={this.handleClick}>Fetch boy, fetch!</button>
+            <button className='fetch-button' onClick={this.handleClick}>Another Dog, Please!</button>
           </div>
         </section>
       </div>
