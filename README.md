@@ -18,7 +18,7 @@ Using The Dog API and either [create-react-app](https://github.com/facebook/crea
 
 ### Visual Example
 
-![Visual example](src/assets/images/great-dogsby.gif)
+![Visual example](great-dogsby.gif)
 
 ### Resources
 
