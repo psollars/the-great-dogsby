@@ -16,7 +16,9 @@ header {
 }
 
 .main-content {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .emoji-bar {
@@ -28,20 +30,31 @@ header {
 }
 
 .dynamic-content {
-
+  display: flex;
+  justify-content: center;
+  height: 220px
 }
 
-.dog-image {
-
+.dog-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
 }
 
+.fetch-button {
+  width: 175px;
+  border: none;
+  padding: 8px 0px;
+  border-radius: 4px;
+  background-color: #653096;
+  color: #ffffff;
+}
 
 /* Loader */
 .loader {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 220px;
 }
 
 .loader h2 {
@@ -101,4 +114,27 @@ header {
   }
 }
 
+/* Media Queries */
+@media all and (min-width: 375px) {
+  .dynamic-content, .dog-image img {
+    height: 260px;
+  }
+}
 
+@media all and (min-width: 425px) {
+  .dynamic-content, .dog-image img {
+    height: 300px;
+  }
+}
+
+@media all and (min-width: 575px) {
+  .dynamic-content, .dog-image img {
+    height: 410px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .dynamic-content, .dog-image img {
+    height: 500px;
+  }
+}

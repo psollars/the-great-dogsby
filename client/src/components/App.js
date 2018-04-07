@@ -41,7 +41,7 @@ class App extends Component {
           </section>
           <div>
             <p>Look at this cute dog!</p>
-            <button onClick={this.handleClick}>Fetch boy, fetch!</button>
+            <button className='fetch-button' onClick={this.handleClick}>Fetch boy, fetch!</button>
           </div>
         </section>
       </div>
