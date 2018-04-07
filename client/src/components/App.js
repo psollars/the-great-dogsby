@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Loader from './Loader';
+import DogImage from './DogImage';
+
 import '../assets/styles/App.css';
 
 class App extends Component {
@@ -32,8 +35,8 @@ class App extends Component {
           </div>
           <section className='dynamic-content'>
             { this.state.isLoading ?
-              <h2>Loading...</h2> :
-              <img className='dog-image' src={this.state.dogImage} alt={this.state.altText} title={this.state.altText}/>
+              <Loader /> :
+              <DogImage dogImage={this.state.dogImage} altText={this.state.altText} />
             }
           </section>
           <div>
