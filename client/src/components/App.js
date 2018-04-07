@@ -20,15 +20,25 @@ class App extends Component {
             <img className='dog-picture' src={this.state.dogImage} />
           </div>
           <div>
-            <button onClick={this.fetch}>Fetch boy, fetch!</button>
+            <button onClick={this.fetchNewDog}>Fetch boy, fetch!</button>
           </div>
         </section>
       </div>
     );
   }
 
-  fetch = () => {
-    alert('good boy');
+  fetchNewDog = () => {
+    return fetch('https://dog.ceo/api/breeds/image/random')
+      .then((response) => response.json())
+      .then((responseJson) => {
+        console.log(responseJson);
+        this.setState({
+          dogImage: responseJson.message
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
 
 } // end of component
