@@ -15,10 +15,22 @@ header {
   color: #ffffff;
 }
 
+.main-content {
+
+}
+
 .emoji-bar {
   padding: 20px 0px 10px 0px;
 }
 
 .emoji {
   font-size: 2em;
+}
+
+.dynamic-content {
+
+}
+
+.dog-image {
+  
 }
