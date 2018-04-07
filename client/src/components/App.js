@@ -17,6 +17,14 @@ class App extends Component {
           <h1>The Great Dogsby</h1>
         </header>
         <section className='main-content'>
+          <div className='emoji-bar'>
+            <span className='emoji'>&#x1f496;</span>
+            <span className='emoji'>&#x1f415;</span>
+            <span className='emoji'>&#x1f415;</span>
+            <span className='emoji'>&#x1f415;</span>
+            <span className='emoji'>&#x1f415;</span>
+            <span className='emoji'>&#x1f496;</span>
+          </div>
           <div>
             <img className='dog-image' src={this.state.dogImage} alt={this.state.altText} title={this.state.altText}/>
           </div>
