@@ -5,7 +5,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      dogImage: 'https://dog.ceo/api/img/germanshepherd/n02106662_6966.jpg'
+      dogImage: 'https://dog.ceo/api/img/germanshepherd/n02106662_6966.jpg',
+      altText: 'German Shepherd'
     }
   }
 
@@ -17,9 +18,10 @@ class App extends Component {
         </header>
         <section className='main-content'>
           <div>
-            <img className='dog-picture' src={this.state.dogImage} />
+            <img className='dog-image' src={this.state.dogImage} alt={this.state.altText} title={this.state.altText}/>
           </div>
           <div>
+            <p>Look at this cute dog!</p>
             <button onClick={this.fetchNewDog}>Fetch boy, fetch!</button>
           </div>
         </section>
@@ -32,8 +34,10 @@ class App extends Component {
       .then((response) => response.json())
       .then((responseJson) => {
         console.log(responseJson);
+        const newAltText = responseJson.message.split('img/')[1].split('/')[0];
         this.setState({
-          dogImage: responseJson.message
+          dogImage: responseJson.message,
+          altText: newAltText
         });
       })
       .catch((error) => {
