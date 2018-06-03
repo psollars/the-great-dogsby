@@ -8,13 +8,13 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      dogImage: 'https://dog.ceo/api/img/germanshepherd/n02106662_6966.jpg',
+      dogImage: "",
       altText: 'German Shepherd',
       isLoading: false
     }
   }
 
-  componentDidMount = () => {
+  componentDidMount() {
     this.fetchNewDog();
   }
 
@@ -60,7 +60,7 @@ class App extends Component {
       .then((response) => response.json())
       .then((responseJson) => {
         console.log(responseJson);
-        const newAltText = responseJson.message.split('img/')[1].split('/')[0];
+        const newAltText = responseJson.message.split('breeds/')[1].split('/')[0];
         this.setState({
           dogImage: responseJson.message,
           altText: newAltText,
