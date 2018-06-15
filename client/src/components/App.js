@@ -56,11 +56,11 @@ class App extends Component {
     this.setState({
       isLoading: true
     });
-    return fetch('https://dog.ceo/api/breeds/image/random')
+    return fetch('https://dog.ceo/api/breed/bullterrier/staffordshire/images/random')
       .then((response) => response.json())
       .then((responseJson) => {
         console.log(responseJson);
-        const newAltText = responseJson.message.split('breeds/')[1].split('/')[0];
+        const newAltText = "dog";//responseJson.message.split('breeds/')[1].split('/')[0];
         this.setState({
           dogImage: responseJson.message,
           altText: newAltText,
